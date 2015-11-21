@@ -1,9 +1,17 @@
 package main
 import (
 	"testing"
-	"time"
+	//"time"
 	"os"
 )
+
+var addTable = []struct{
+	in [] int
+	out int
+}{
+	{[]int{1,2},3},
+	{[]int{1,2,3,4},10},
+}
 
 func TestMain(m *testing.M){
 	println("start test")
@@ -14,18 +22,24 @@ func TestMain(m *testing.M){
 
 
 func TestAdd(t *testing.T){
-	result :=Add(1,2)
-	time.Sleep(3*time.Second)
-	if result!=3{
-		t.Log("")
-		t.Fail()
-		//Log + FailNow=Fatal
+	for _,entry :=range addTable{
+		result:=Add(entry.in...)
+		if result !=entry.out{
+			t.Error("Fail adding")
+		}
 	}
-
-	varresult :=Add(1,2,3,4)
-	if varresult!=10{
-		t.Error("Vartesterror.")
-	}
+//	result :=Add(1,2)
+//	time.Sleep(3*time.Second)
+//	if result!=3{
+//		t.Log("")
+//		t.Fail()
+//		//Log + FailNow=Fatal
+//	}
+//
+//	varresult :=Add(1,2,3,4)
+//	if varresult!=10{
+//		t.Error("Vartesterror.")
+//	}
 }
 
 func TestSubtract(t *testing.T){
