@@ -5,7 +5,7 @@ import(
 )
 
 func ExampleTest(){
-	fmt.Print("First")
+	fmt.Print("First ")
 	fmt.Println("Second")
 	//Output:
 	//First Second
