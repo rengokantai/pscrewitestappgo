@@ -1,0 +1,6 @@
+mode: set
+CP1\math.go:3.24,5.16 2 1
+CP1\math.go:9.2,9.21 1 1
+CP1\math.go:12.2,12.15 1 1
+CP1\math.go:5.16,8.3 2 0
+CP1\math.go:9.21,11.3 1 1
