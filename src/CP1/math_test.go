@@ -2,7 +2,16 @@ package main
 import (
 	"testing"
 	"time"
+	"os"
 )
+
+func TestMain(m *testing.M){
+	println("start test")
+	result:= m.Run()
+	println("exit test")
+	os.Exit(result)
+}
+
 
 func TestAdd(t *testing.T){
 	result :=Add(1,2)
