@@ -25,3 +25,10 @@ func TestSubtract(t *testing.T){
 		t.Fatal("error")
 	}
 }
+
+func TestFake(t *testing.T){
+	//Or testing.Short()
+	if(testing.Verbose()){
+		t.Skip("Skip verbose")
+	}
+}
